@@ -11,6 +11,9 @@ This program requires the following Python modules:
     praw
     bs4 (BeautifulSoup)
     requests
+    
+More on praw here -> [Link](https://praw.readthedocs.io/en/stable/)
+More on BeautifulSoup here -> [Link](https://pypi.org/project/beautifulsoup4/)
 
 ## Installation
 
