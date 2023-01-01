@@ -1,4 +1,4 @@
-# DontClickTheMail
+# dontClickTheMail
 
 Are you tired of seeing the Daily Mail polluting your Reddit feeds? This Python script is here to help!
 
