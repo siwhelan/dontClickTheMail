@@ -36,6 +36,7 @@ def fetch_article_content(url):
 
         # Extract the text from the p elements and add it to the article_content list
         # Skip p elements that are greater than or equal to 10000 characters in length
+        # This avoids any issues with Reddit's comment limit of 10000 characters
         article_content += [
             element.text for element in para_elements if len(element.text) < 10000
         ]
@@ -43,10 +44,11 @@ def fetch_article_content(url):
     # Join the paragraphs with a newline character
     article_content = "\n\n".join(article_content)
 
-    # Return the h1 text followed by the article content
+    # Return the h1 text in bold, followed by the article content
     return f"***{h1_text}***\n\n{article_content}"
 
 
+# Set these to your favourite subs
 subreddit_names = ["worldnews", "ukpolitics", "news", "politics"]
 
 # Iterate over the subreddit names
@@ -55,8 +57,10 @@ for subreddit_name in subreddit_names:
     subreddit = reddit.subreddit(subreddit_name)
 
     # Use the `subreddit.new()` function to get a generator for the newest posts in the subreddit
+    # You can change this limit to whatver you'd like
     for post in subreddit.new(limit=100):
         # Check if the post is a Daily Mail article, omit 'hulldailymail.co.uk' links
+        # This avoids the bot getting confused over different HTML setups
         if "dailymail.co.uk" in post.url and "hulldailymail.co.uk" not in post.url:
             # Use the `praw.models.Submission.comments` method to get a list of comments for the post
             comments = post.comments
