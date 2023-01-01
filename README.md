@@ -2,6 +2,8 @@
 
 Are you tired of seeing the Daily Mail polluting your Reddit feeds? This Python script is here to help!
 
+Simply run the script and it will scan the 100 newest posts in the specified subreddits for any Daily Mail articles. If it finds a post with a Daily Mail article and no comments from the bot, it will scrape the article's content and post it as a comment. That way, you and other users can read the article without giving the Daily Mail any clicks or ad revenue.
+
 ## Dependencies
 
 This program requires the following Python modules:
