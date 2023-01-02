@@ -28,6 +28,10 @@ To use this code, you will need to have a Reddit account and a Reddit API client
 
 Once you have your client ID and client secret, you will need to replace `yourusernamehere`  with your Reddit username and `client_id` and `client_secret` with your own client ID and client secret.
 
+## Screenshots
+
+Some examples of the script in use can be viewed [here](https://imgur.com/a/BoBgx1O)
+
 ## Note
 
 This code is for educational purposes only and is not intended for use in an automated fashion. Please use responsibly and in accordance with [Reddit's API rules](https://www.reddit.com/wiki/api/). Do not use it to spam Reddit, or to post comments that violate Reddit's terms of service. The author of this program is not responsible for any consequences that may result from the use of this program.
